@@ -1,0 +1,368 @@
+/* ==========================================================================
+   RESET & SYSTEM VARIABLE SPECIFICATIONS (Midnight Tech Theme Default)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #0a0a0f;
+    --bg-surface: #12121a;
+    --border-color: #1f1f2e;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --brand-primary: #6366f1; /* Deep Indigo */
+    --brand-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --card-shadow: rgba(99, 102, 241, 0.05);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme Variables (Phase 2 Toggle Option) */
+body.light-theme {
+    --bg-main: #f9fafb;
+    --bg-surface: #ffffff;
+    --border-color: #e5e7eb;
+    --text-main: #111827;
+    --text-muted: #4b5563;
+    --brand-primary: #4f46e5;
+    --brand-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --card-shadow: rgba(0, 0, 0, 0.05);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   STICKY STYLISH NAVBAR (Phase 1 & 2)
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(12px); /* Phase 3 Ready Sneak-Peek */
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+body.light-theme .navbar {
+    background-color: rgba(249, 249, 251, 0.8);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo .dot {
+    color: var(--brand-primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-item:hover {
+    color: var(--text-main);
+}
+
+.theme-btn {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-btn:hover {
+    background: var(--border-color);
+}
+
+/* Hamburger UI */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-main);
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   HERO ARCHITECTURE (Centered & Bold)
+   ========================================================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 2rem 0 2rem;
+}
+
+.hero-badge {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--brand-primary);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 span {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+/* CTA Micro-Interactions */
+.cta-btn {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.primary-cta {
+    background: var(--brand-gradient);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.primary-cta:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
+
+/* ==========================================================================
+   SERVICES GRID (Modern Cards)
+   ========================================================================== */
+.services-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.sub-title {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--brand-primary);
+    font-weight: 700;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* 3-Column Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--card-shadow);
+    transition: var(--transition);
+}
+
+.card-icon {
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Phase 2: Card Hover Z-Axis Lifting */
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--brand-primary);
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.15);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 2rem;
+    background-color: var(--bg-surface);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.social-item:hover {
+    color: var(--brand-primary);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Strict Mobile Overrides)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-surface);
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        padding: 2.5rem;
+        gap: 2rem;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Hamburger Animation Transformation */
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -7px);
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    /* Collapse to 1 column on smaller viewport screens */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodesk IT | Enterprise Tailwind Engine</title>
+    <!-- Tailwind CSS Script Platform Injection -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Tells Tailwind to look for the "dark" class on the html/body element
+            theme: {
+                extend: {
+                    colors: {
+                        cyberDark: '#0a0a0f',
+                        cyberSurface: '#12121a',
+                        cyberBorder: '#1f1f2e',
+                        textMuted: '#9ca3af',
+                    },
+                    backgroundImage: {
+                        'brand-gradient': "linear-gradient(135deg, #6366f1 0%, #a855f7 100%)",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-cyberDark dark:text-slate-100 font-sans antialiased overflow-x-hidden transition-colors duration-300">
+
+    <!-- STICKY GLASS NAVBAR (Handles light/dark contrast correctly) -->
+    <header class="fixed top-0 left-0 w-full bg-white/80 dark:bg-cyberDark/80 backdrop-blur-md border-b border-slate-200 dark:border-cyberBorder z-50 transition-colors duration-300 dynamic-nav">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            
+            <div class="text-2xl font-extrabold tracking-tight">
+                Prodesk<span class="text-[#6366f1]">.</span>
+            </div>
+            
+            <button class="menu-toggle flex flex-col gap-1.5 md:hidden cursor-pointer z-50" aria-label="Toggle Navigation">
+                <span class="w-[22px] h-[2px] bg-current transition-all duration-300 bar-1"></span>
+                <span class="w-[22px] h-[2px] bg-current transition-all duration-300 bar-2"></span>
+                <span class="w-[22px] h-[2px] bg-current transition-all duration-300 bar-3"></span>
+            </button>
+
+            <nav class="nav-links hidden md:flex items-center gap-10">
+                <a href="#home" class="text-[0.95rem] font-medium text-slate-600 hover:text-slate-900 dark:text-textMuted dark:hover:text-white transition-colors duration-300">Home</a>
+                <a href="#services" class="text-[0.95rem] font-medium text-slate-600 hover:text-slate-900 dark:text-textMuted dark:hover:text-white transition-colors duration-300">Services</a>
+                <a href="#features" class="text-[0.95rem] font-medium text-slate-600 hover:text-slate-900 dark:text-textMuted dark:hover:text-white transition-colors duration-300">Features</a>
+                <a href="#faq" class="text-[0.95rem] font-medium text-slate-600 hover:text-slate-900 dark:text-textMuted dark:hover:text-white transition-colors duration-300">FAQ</a>
+                
+                <!-- Theme Controller Button -->
+                <button id="theme-toggle" class="bg-white border border-slate-300 dark:bg-cyberSurface dark:border-cyberBorder px-2.5 py-1 rounded-md cursor-pointer hover:opacity-80 transition-all duration-300" aria-label="Toggle Theme">🌙</button>
+                
+                <!-- LINK BACK TO HOME RAW CSS VERSION -->
+                <a href="index.html" class="text-[0.95rem] font-bold text-indigo-600 dark:text-emerald-400 hover:underline transition-colors duration-300">⬅️ Back to Raw CSS</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO MODULE -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-8 pt-20">
+        <div class="bg-[#6366f1]/10 text-[#6366f1] border border-[#6366f1]/20 px-4 py-1 rounded-full text-xs font-semibold mb-6 tracking-wide">
+            Now Operational For 2026 (Tailwind Framework Optimization)
+        </div>
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-none mb-6">
+                We Build <span class="bg-brand-gradient bg-clip-text text-transparent">Digital Experiences</span>
+            </h1>
+            <p class="text-lg text-slate-600 dark:text-textMuted max-w-2xl mx-auto mb-10 leading-relaxed">
+                Our engineering pipeline transforms raw concepts into pixel-perfect architectural realities. High performance comes standard.
+            </p>
+            <div class="flex justify-center">
+                <a href="#services" class="inline-block bg-brand-gradient text-white font-semibold px-10 py-3.5 rounded-lg shadow-lg hover:scale-[1.03] shadow-indigo-500/20 transition-all duration-300">
+                    Get Started Engine
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- METRICS STATS BANNER -->
+    <section class="border-b border-slate-200 dark:border-cyberBorder px-8 py-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-4">
+                <h3 class="text-5xl font-extrabold bg-brand-gradient bg-clip-text text-transparent mb-2">99.9%</h3>
+                <p class="text-slate-500 dark:text-textMuted text-xs font-bold uppercase tracking-wider">Uptime SLA Guarantee</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-5xl font-extrabold bg-brand-gradient bg-clip-text text-transparent mb-2">24ms</h3>
+                <p class="text-slate-500 dark:text-textMuted text-xs font-bold uppercase tracking-wider">Average API Latency</p>
+            </div>
+            <div class="p-4">
+                <h3 class="text-5xl font-extrabold bg-brand-gradient bg-clip-text text-transparent mb-2">140+</h3>
+                <p class="text-slate-500 dark:text-textMuted text-xs font-bold uppercase tracking-wider">Global Deployments</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES RESPONSIVE GRID -->
+    <section id="services" class="max-w-7xl mx-auto px-8 py-32">
+        <div class="text-center mb-20">
+            <span class="text-xs font-bold uppercase tracking-[2px] text-[#6366f1]">Expertise</span>
+            <h2 class="text-4xl font-extrabold tracking-tight mt-2 mb-4">Our Services</h2>
+            <p class="text-slate-600 dark:text-textMuted">Engineered for speed, scale, and cross-device precision.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 01 -->
+            <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-12 rounded-xl shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-indigo-600 dark:hover:border-[#6366f1]">
+                <div class="text-2xl bg-slate-50 dark:bg-white/5 w-14 h-14 flex items-center justify-center rounded-lg mb-8 border border-slate-200 dark:border-cyberBorder">⚡</div>
+                <h3 class="text-xl font-bold mb-4">SEO Optimization</h3>
+                <p class="text-slate-600 dark:text-textMuted text-[0.95rem] leading-relaxed">Maximize visibility and structural indexing with technical, standard-compliant SEO logic.</p>
+            </div>
+            <!-- Card 02 -->
+            <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-12 rounded-xl shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-indigo-600 dark:hover:border-[#6366f1]">
+                <div class="text-2xl bg-slate-50 dark:bg-white/5 w-14 h-14 flex items-center justify-center rounded-lg mb-8 border border-slate-200 dark:border-cyberBorder">⚙️</div>
+                <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                <p class="text-slate-600 dark:text-textMuted text-[0.95rem] leading-relaxed">Clean, semantic code built using modular architectural layouts to guarantee sub-second rendering.</p>
+            </div>
+            <!-- Card 03 -->
+            <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-12 rounded-xl shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-indigo-600 dark:hover:border-[#6366f1]">
+                <div class="text-2xl bg-slate-50 dark:bg-white/5 w-14 h-14 flex items-center justify-center rounded-lg mb-8 border border-slate-200 dark:border-cyberBorder">📊</div>
+                <h3 class="text-xl font-bold mb-4">Digital Marketing</h3>
+                <p class="text-slate-600 dark:text-textMuted text-[0.95rem] leading-relaxed">Data-centric execution models that balance conversion velocity and intentional user retention.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE GRID SECTION -->
+    <section id="features" class="bg-slate-100/50 dark:bg-white/[0.01] border-t border-slate-200 dark:border-cyberBorder px-8 py-32">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-xs font-bold uppercase tracking-[2px] text-[#6366f1]">Performance Stack</span>
+                <h2 class="text-4xl font-extrabold tracking-tight mt-2 mb-4">System Architecture</h2>
+                <p class="text-slate-600 dark:text-textMuted">Lorem ipsum dolor sit amet consectetur adipiscing elit integer luctus.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-10 rounded-xl">
+                    <div class="text-2xl mb-6">🔐</div>
+                    <h3 class="text-xl font-bold mb-3">Secure Cryptography</h3>
+                    <p class="text-slate-600 dark:text-textMuted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+                <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-10 rounded-xl">
+                    <div class="text-2xl mb-6">🎛️</div>
+                    <h3 class="text-xl font-bold mb-3">Advanced Controls</h3>
+                    <p class="text-slate-600 dark:text-textMuted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+                <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-10 rounded-xl">
+                    <div class="text-2xl mb-6">☁️</div>
+                    <h3 class="text-xl font-bold mb-3">Cloud Virtualization</h3>
+                    <p class="text-slate-600 dark:text-textMuted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+                <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-10 rounded-xl">
+                    <div class="text-2xl mb-6">📈</div>
+                    <h3 class="text-xl font-bold mb-3">Data Pipelines</h3>
+                    <p class="text-slate-600 dark:text-textMuted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+                <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-10 rounded-xl">
+                    <div class="text-2xl mb-6">🛠️</div>
+                    <h3 class="text-xl font-bold mb-3">Automated Build</h3>
+                    <p class="text-slate-600 dark:text-textMuted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+                <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-10 rounded-xl">
+                    <div class="text-2xl mb-6">🚀</div>
+                    <h3 class="text-xl font-bold mb-3">Instant Edge Delivery</h3>
+                    <p class="text-slate-600 dark:text-textMuted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SYSTEM MODULE -->
+    <section id="faq" class="max-w-4xl mx-auto px-8 py-32 border-t border-slate-200 dark:border-cyberBorder">
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold uppercase tracking-[2px] text-[#6366f1]">Information Spectrum</span>
+            <h2 class="text-4xl font-extrabold tracking-tight mt-2 mb-4">Frequently Asked Questions</h2>
+        </div>
+        <div class="flex flex-col gap-6">
+            <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-8 rounded-xl">
+                <h4 class="text-lg font-bold mb-2">What is the standard configuration process?</h4>
+                <p class="text-slate-600 dark:text-textMuted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut facilisis sem, sit amet pretium lorem. Curabitur scelerisque tortor in eleifend convallis.</p>
+            </div>
+            <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-8 rounded-xl">
+                <h4 class="text-lg font-bold mb-2">How does edge acceleration optimize layout rendering?</h4>
+                <p class="text-slate-600 dark:text-textMuted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut facilisis sem, sit amet pretium lorem. Curabitur scelerisque tortor in eleifend convallis.</p>
+            </div>
+            <div class="bg-white border border-slate-200 dark:bg-cyberSurface dark:border-cyberBorder p-8 rounded-xl">
+                <h4 class="text-lg font-bold mb-2">Can third-party components hook into the API?</h4>
+                <p class="text-slate-600 dark:text-textMuted text-sm leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut facilisis sem, sit amet pretium lorem. Curabitur scelerisque tortor in eleifend convallis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER MODULE -->
+    <footer class="border-t border-slate-200 dark:border-cyberBorder px-8 py-12 bg-slate-50 dark:bg-cyberSurface/20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500 dark:text-textMuted">
+            <p>&copy; 2026 Prodesk IT. Refactored entirely into Phase 3 Tailwind Architecture.</p>
+            <div class="flex gap-6 font-bold">
+                <a href="#" class="hover:text-[#6366f1] transition-colors">TW</a>
+                <a href="#" class="hover:text-[#6366f1] transition-colors">LN</a>
+                <a href="#" class="hover:text-[#6366f1] transition-colors">GH</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Hamburger Mechanics
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const b1 = document.querySelector('.bar-1');
+        const b2 = document.querySelector('.bar-2');
+        const b3 = document.querySelector('.bar-3');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            navLinks.classList.toggle('flex-col');
+            navLinks.classList.toggle('absolute');
+            navLinks.classList.toggle('top-full');
+            navLinks.classList.toggle('left-0');
+            navLinks.classList.toggle('w-full');
+            navLinks.classList.toggle('p-8');
+            navLinks.classList.toggle('gap-6');
+            navLinks.classList.toggle('bg-white');
+            navLinks.classList.toggle('dark:bg-cyberDark');
+            
+            b1.classList.toggle('rotate-45');
+            b1.classList.toggle('translate-y-[8px]');
+            b2.classList.toggle('opacity-0');
+            b3.classList.toggle('-rotate-45');
+            b3.classList.toggle('-translate-y-[8px]');
+        });
+
+        // Fixed Theme Switching Engine
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            // Toggle the standard Tailwind dark indicator class on the root HTML tag
+            htmlElement.classList.toggle('dark');
+            
+            if (htmlElement.classList.contains('dark')) {
+                themeToggle.textContent = '🌙';
+            } else {
+                themeToggle.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>
