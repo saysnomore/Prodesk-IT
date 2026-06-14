@@ -1,5 +1,7 @@
 LIVE URL: https://github.com/saysnomore/Prodesk-IT/commit/ef40b917fbccf88c167316a787643ef95d626fa1 
 
+LIVE URL [BOOKSTORE]: https://portlandbookstore.netlify.app/
+
 ABOUT THE PROJECT:
 Phase 1 Check
 =
