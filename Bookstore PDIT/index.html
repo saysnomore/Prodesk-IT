@@ -3,50 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indie Bookstore - Author Reading Event</title>
+    <title>Indie Bookstore — Author Reading Event</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- HERO -->
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-headline">Live Author Reading Event</h1>
-            <p class="hero-subheadline">Join us for an evening of stories, community, and conversation in Portland.</p>
-            <a href="#register" class="cta-button">Register Now</a>
+            <p class="hero-eyebrow">Portland · One Night Only</p>
+            <h1 class="hero-headline">
+                <span class="headline-line">Live</span>
+                <span class="headline-line accent">Author</span>
+                <span class="headline-line">Reading</span>
+            </h1>
+            <p class="hero-subheadline">An evening of stories, community, and conversation — hosted by your neighbourhood bookstore.</p>
+            <a href="#authors" class="cta-button">Reserve Your Seat</a>
         </div>
+        <div class="hero-rule"></div>
     </header>
 
-    <main class="container">
-        <section id="register" class="event-section">
-            <h2 class="section-title">Featured Authors</h2>
-            
-            <div class="event-grid">
-                <div class="author-card">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Portrait of Eleanor Vance" class="author-photo">
-                    </div>
-                    <div class="author-info">
-                        <h3>Eleanor Vance</h3>
-                        <p class="author-bio">Eleanor is an award-winning novelist based in the Pacific Northwest, known for her gripping contemporary fiction and atmospheric world-building.</p>
-                    </div>
-                </div>
+    <!-- MAIN -->
+    <main>
+        <section id="authors" class="authors-section">
 
-                <div class="author-card">
-                    <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Portrait of Marcus Hayes" class="author-photo">
-                    </div>
-                    <div class="author-info">
-                        <h3>Marcus Hayes</h3>
-                        <p class="author-bio">Marcus is a poet and essayist whose work explores the intersections of urban landscapes, history, and identity. His latest collection drops this month.</p>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-label">Featured Readers</span>
+                <div class="section-divider"></div>
             </div>
+
+            <!-- Author 1 -->
+            <article class="author-card">
+                <div class="card-marker">
+                    <span class="marker-name">Eleanor Vance</span>
+                </div>
+                <div class="image-container">
+                    <img
+                        src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80"
+                        alt="Portrait of Eleanor Vance"
+                        class="author-photo"
+                    >
+                </div>
+                <div class="author-info">
+                    <p class="author-genre">Contemporary Fiction</p>
+                    <h2 class="author-name">Eleanor Vance</h2>
+                    <p class="author-bio">Eleanor is an award-winning novelist based in the Pacific Northwest, known for her gripping contemporary fiction and atmospheric world-building. Her prose lingers long after the final page.</p>
+                    <p class="author-reads">Reading from <em>The Quiet Hours</em></p>
+                </div>
+            </article>
+
+            <!-- Divider rule -->
+            <div class="card-rule"></div>
+
+            <!-- Author 2 -->
+            <article class="author-card">
+                <div class="card-marker">
+                    <span class="marker-name">Marcus Hayes</span>
+                </div>
+                <div class="image-container">
+                    <img
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+                        alt="Portrait of Marcus Hayes"
+                        class="author-photo"
+                    >
+                </div>
+                <div class="author-info">
+                    <p class="author-genre">Poetry &amp; Essays</p>
+                    <h2 class="author-name">Marcus Hayes</h2>
+                    <p class="author-bio">Marcus is a poet and essayist whose work explores the intersections of urban landscapes, history, and identity. His latest collection drops this month — hear it first, live.</p>
+                    <p class="author-reads">Reading from <em>Concrete Psalms</em></p>
+                </div>
+            </article>
+
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Indie Bookstore Portland. All Rights Reserved.</p>
+        <p class="footer-store">Indie Bookstore Portland</p>
+        <p class="footer-copy">&copy; 2026 · All Rights Reserved</p>
     </footer>
 
 </body>
